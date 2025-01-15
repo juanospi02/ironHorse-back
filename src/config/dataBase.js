@@ -9,7 +9,7 @@ export async function connectionMongo() {
     
 
     try {
-        await mongoose.connect(process.env.DB_URL);
+        await mongoose.connect(process.env.DB_URL,{dbName:"pruebasUnitariasTF"});
         console.log("Successful connection to DB");
         
     } catch (error) {
